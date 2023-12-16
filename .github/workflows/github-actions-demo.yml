@@ -132,7 +132,7 @@ jobs:
           push: true
           tags: |
             ${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:${{ github.sha }}
-            ${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:latest # Tag with the commit SHA
+            ${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:latest
             ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:latest
             ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:${{ github.sha }}
       - name: Run Trivy vulnerability scanner
