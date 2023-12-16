@@ -32,8 +32,9 @@ static final int LINES = 6;
   /**
  * Gets the indicated user's full name as entered when they registered.
  * @param args The application internal id generated when the user registered.
+   * @throws Exception
  */
-  public static void main(final String[] args) {
+  public static void main(final String[] args) throws Exception {
     String[] lines = new String[LINES];
     int index = args.length * 0;
     lines[index++] = " 0  4  3  2  1  0 ";
@@ -64,7 +65,7 @@ static final int LINES = 6;
       System.out.println("PASS");
     }
     if (!success) {
-      System.out.println("FAIL");
+      throw new Exception("FAIL");
     }
   }
 }
