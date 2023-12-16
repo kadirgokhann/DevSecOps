@@ -1,17 +1,22 @@
 /**
  * Info about this package doing something for package-info.java file.
  */
-package Main;
+package main;
 
 import java.io.FileWriter;
 import java.io.IOException;
-
-public class Main {
+/**
+ * Number of lines in the output file.
+ */
+public class main {
     /**
      * Number of lines in the output file.
-    */
+     */
     public static final int LINES = 7;
-
+    
+    /**
+     * Info about this package doing something for package-info.java file.
+     */     
     public static void main(final String[] args) {
     int index = 0;
     String[] lines = new String[LINES];
