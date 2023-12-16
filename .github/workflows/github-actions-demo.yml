@@ -38,7 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
-    needs: [linting]
     steps:
       - name: Run the Application
         run: javac main/Mainfunction.java; java main/Mainfunction
