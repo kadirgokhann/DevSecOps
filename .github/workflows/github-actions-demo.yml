@@ -2,6 +2,27 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
+  cpp-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: cpp-linter/cpp-linter-action@v2
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: file
+          # The following value will only update a single comment
+          # in a pull request's thread. Set it to false to disable the comment.
+          # Set it to true to post a new comment (and delete the old comment).
+          thread-comments: ${{ github.event_name == 'pull_request' && 'update' }}
+
+      - name: Fail fast?!
+        if: steps.linter.outputs.checks-failed > 0
+        run: echo "Some files failed the linting checks!"
+        # for actual deployment
+        # run: exit 1
+
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
@@ -26,19 +47,3 @@ jobs:
           git config --global user.email "kadirgokhann@gmail.com"
           git config --global user.name "kadirgokhann"
           git add . && git commit -m "add binary" && git push
-  cpp-linter:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: cpp-linter/cpp-linter-action@main
-        id: linter
-        continue-on-error: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          style: file
-          files-changed-only: false
-
-      - name: Fail fast?!
-        if: steps.linter.outputs.checks-failed != 0
-        run: echo "some linter checks failed. ${{ steps.linter.outputs.checks-failed }}"
