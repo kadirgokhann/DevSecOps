@@ -89,6 +89,7 @@ jobs:
           category: "/language:${{matrix.language}}"
   dependabot:
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
