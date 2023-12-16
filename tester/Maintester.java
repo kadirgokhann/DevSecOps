@@ -1,4 +1,7 @@
 /**
+@SuppressWarnings("checkstyle:hideutilityclassconstructor")
+@SuppressWarnings("checkstyle:javadocpackage")
+@SuppressWarnings("checkstyle:javadocmethod")
 * Domain classes used to produce .....
 * <p>
 * These classes contain the ......
@@ -14,7 +17,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class maintester {
+public class Maintester {
   static final int LINES = 6;
   /**
  * Gets the indicated user's full name as entered when they registered.
@@ -38,7 +41,7 @@ public class maintester {
       int i = 0;
       while (myReader.hasNextLine()) {
         String data = myReader.nextLine();
-        if (i < LINES && !data.equals(lines[i])){
+        if (i < LINES && !data.equals(lines[i])) {
           success = false;
         }
         i++;

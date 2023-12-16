@@ -1,4 +1,7 @@
 /**
+@SuppressWarnings("checkstyle:hideutilityclassconstructor")
+@SuppressWarnings("checkstyle:javadocpackage")
+@SuppressWarnings("checkstyle:javadocmethod")
 * Domain classes used to produce .....
 * <p>
 * These classes contain the ......
