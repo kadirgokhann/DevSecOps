@@ -56,14 +56,6 @@ jobs:
       - name: Run the Tester
         id: test_id
         run: javac tester/Maintester.java; java tester/Maintester
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@main
-        # Override language selection by uncommentin2g this and choosing your languages
-        with:
-          languages: java-kotlin
-          config-file: ./.github/codeql/codeql-config.yml
-      - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@main
       - name: Push the binaries to the repo
         run: |
           git config --global user.email "kadirgokhann@gmail.com"
