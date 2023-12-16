@@ -27,7 +27,7 @@ jobs:
       - name: Run the Application
         run: javac Main/Main.java; java Main/Main
       - name: lint with checkstyle
-        run: where diff
+        run: diff
       - run: java -jar google-java-format-1.18.1-all-deps.jar Main/Main.java > main_formatted.java
       - run: diff Main/Main.java main_formatted.java > main_diff.txt
       - run: java -jar google-java-format-1.18.1-all-deps.jar Tester/Main.java > tester_formatted.java
