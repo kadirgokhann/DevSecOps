@@ -49,7 +49,7 @@ jobs:
         run: javac main/Mainfunction.java; java main/Mainfunction
       - name: Run the Tester
         id: test_id
-        run: javac tester/Maintester.java; java tester/Maintester > $RESULT
+        run: javac tester/Maintester.java; java tester/Maintester
       - name: The test step has faileds
         if: ${{ failure() && steps.test_id.conclusion == 'PASS' }}
         run: echo "The test step has failed"
