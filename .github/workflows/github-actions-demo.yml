@@ -50,6 +50,8 @@ jobs:
       - name: Run the Tester
         id: test_id
         run: javac tester/Maintester.java; java tester/Maintester
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@main
       - name: Push the binaries to the repo
         run: |
           git config --global user.email "kadirgokhann@gmail.com"
