@@ -10,3 +10,12 @@ updates:
     schedule:
       interval: "weekly"
 
+
+
+      - name: Container vulnerability scanning
+        run: |
+          # Introducing a synthetic error to demonstrate a failed step
+          echo "Sample container vulnerability found" && exit 1
+      - name: Upload container to registry
+        run: |
+          # Your container upload commands here
