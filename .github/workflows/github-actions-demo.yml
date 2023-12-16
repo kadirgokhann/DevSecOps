@@ -52,7 +52,7 @@ jobs:
         run: javac tester/Maintester.java; java tester/Maintester
       - name: Initialize CodeQL
         uses: github/codeql-action/init@main
-        # Override language selection by uncommenting this and choosing your languages
+        # Override language selection by uncommentin2g this and choosing your languages
         with:
           languages: java
           config-file: ./.github/codeql/codeql-config.yml
