@@ -1,10 +1,8 @@
 all:
-      g++ -std=c++17 hello.cpp -o hello
-      g++ -std=c++17 helloTest.cpp -lcppunit -o helloTest
+	g++ -std=c++17 hello.cpp -o hello;chmod +x hello
+	g++ -std=c++17 helloTest.cpp -o helloTest 
 
 test:
-      chmod +x hello
-      ./helloTest
-
+	./helloTest
 clean:
-      $(RM) hello helloTest
+	$(RM) hello helloTest
