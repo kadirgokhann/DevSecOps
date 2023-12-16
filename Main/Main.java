@@ -1,22 +1,29 @@
+/**
+ * Info about this package doing something for package-info.java file.
+ */
 package Main;
 
 import java.io.FileWriter;
-import java.io.IOException; 
-
+import java.io.IOException;
 
 public class Main {
-  public static void main(String[] args) {
-    String[] lines = new String[6];
-    lines[0] = " 0  4  3  2  1  0 ";
-    lines[1] = " 4  1  2  3  4  1 ";
-    lines[2] = " 3  2  3  4  1  2 ";
-    lines[3] = " 2  3  4  1  2  2 ";
-    lines[4] = " 1  4  1  2  3  2 ";
-    lines[5] = " 0  1  2  2  2  0 ";
+    /**
+     * Number of lines in the output file.
+    */
+    public static final int LINES = 7;
+
+    public static void main(final String[] args) {
+    int index = 0;
+    String[] lines = new String[LINES];
+    lines[index++] = " 0  4  3  2  1  0 ";
+    lines[index++] = " 4  1  2  3  4  1 ";
+    lines[index++] = " 3  2  3  4  1  2 ";
+    lines[index++] = " 2  3  4  1  2  2 ";
+    lines[index++] = " 1  4  1  2  3  2 ";
+    lines[index++] = " 0  1  2  2  2  0 ";
     try {
       FileWriter myWriter = new FileWriter("results.txt");
-      for (int i = 0; i < 6; i++) 
-      {
+      for (int i = 0; i < LINES; i++) {
         myWriter.write(lines[i] + "\n");
       }
       myWriter.close();
