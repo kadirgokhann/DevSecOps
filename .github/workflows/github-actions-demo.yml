@@ -17,3 +17,12 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: g++ main.cpp -o a.out
+      - uses: actions/checkout@v2
+      - name: install cppunit
+        run: sudo apt install -y libcppunit-dev
+      - name: configure
+        run: ./configure
+      - name: make
+        run: make
+      - name: make test
+        run: make test
