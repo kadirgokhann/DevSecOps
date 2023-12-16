@@ -15,19 +15,30 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: g++ main.cpp -o a.out
-      - uses: actions/checkout@v2
-      - name: install cppunit
-        run: sudo apt install -y libcppunit-dev
-      - name: configure
+      - name: Set the configures
         run: ./configure
-      - name: make
+      - name: Build the cpp files / make
         run: make
-      - name: make test
+      - name: Test the binaries
         run: make test
-      - name: push the binarys
+      - name: Push the binaries to the repo
         run: |
           git config --global user.email "kadirgokhann@gmail.com"
           git config --global user.name "kadirgokhann"
           git add . && git commit -m "add binary" && git push
+  cpp-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cpp-linter/cpp-linter-action@main
+        id: linter
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: file
+          files-changed-only: false
+
+      - name: Fail fast?!
+        if: steps.linter.outputs.checks-failed != 0
+        run: echo "some linter checks failed. ${{ steps.linter.outputs.checks-failed }}"
