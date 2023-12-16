@@ -21,9 +21,10 @@ jobs:
           java-version: "11"
           distribution: "temurin"
           architecture: x64
-      - name: Run the Maven verify phase
-        run: mvn --batch-mode --update-snapshots verify
-
+      - name: Run the Application
+        run: javac Main/Main.java; java Main/Main
+      - name: Run the Tester
+        run: javac Tester/Main.java; java Tester/Main
       - name: Push the binaries to the repo
         run: |
           git config --global user.email "kadirgokhann@gmail.com"
