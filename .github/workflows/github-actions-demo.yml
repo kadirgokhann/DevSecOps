@@ -27,4 +27,7 @@ jobs:
       - name: make test
         run: make test
       - name: push the binary
-        run: git add . && git commit -m "add binary" && git push
+        run: |
+          git config --global user.email "kadirgokhann@gmail.com"
+          git config --global user.name "kadirgokhann"
+          git add . && git commit -m "add binary" && git push
