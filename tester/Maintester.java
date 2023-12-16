@@ -23,12 +23,17 @@ public class Maintester {
 /**
  * Number of lines in the output file.
  */
-  static final int LINES = 6;
+static final int LINES = 6;
+  /**
+    * Number of lines in the output file.
+    */
+  private Maintester() {
+  }
   /**
  * Gets the indicated user's full name as entered when they registered.
  * @param args The application internal id generated when the user registered.
  */
-  static void main(final String[] args) {
+  public static void main(final String[] args) {
     String[] lines = new String[LINES];
     int index = args.length * 0;
     lines[index++] = " 0  4  3  2  1  0 ";

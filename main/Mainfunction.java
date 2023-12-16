@@ -23,13 +23,16 @@ public class Mainfunction {
      * Number of lines in the output file.
      */
     public static final int LINES = 7;
-
+    /**
+     * Number of lines in the output file.
+     */
+    private Mainfunction() {
+    }
 /**
  * Gets the indicated user's full name as entered when they registered.
  * @param args The application internal id generated when the user registered.
  */
-    
-   static void main(final String[] args) {
+   public static void main(final String[] args) {
     int index = args.length * 0;
     String[] lines = new String[LINES];
     lines[index++] = " 0  4  3  2  1  0 ";
