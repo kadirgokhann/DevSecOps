@@ -16,16 +16,19 @@ package tester;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-
+/**
+  * Number of lines in the output file.
+  */
 public class Maintester {
+/**
+ * Number of lines in the output file.
+ */
   static final int LINES = 6;
   /**
  * Gets the indicated user's full name as entered when they registered.
  * @param args The application internal id generated when the user registered.
- * @return "void" ???  How do you get a name if it returns VOID?
  */
-  public static void main(final String[] args) {
-    
+  static void main(final String[] args) {
     String[] lines = new String[LINES];
     int index = args.length * 0;
     lines[index++] = " 0  4  3  2  1  0 ";
@@ -55,7 +58,7 @@ public class Maintester {
     if (success) {
       System.out.println("PASS");
     }
-    else {
+    if (!success) {
       System.out.println("FAIL");
     }
   }

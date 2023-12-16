@@ -23,13 +23,14 @@ public class Mainfunction {
      * Number of lines in the output file.
      */
     public static final int LINES = 7;
+
 /**
  * Gets the indicated user's full name as entered when they registered.
  * @param args The application internal id generated when the user registered.
- * @return "void" ???  How do you get a name if it returns VOID?
  */
-    public static void main(final String[] args) {
-    int index = 0;
+    
+   static void main(final String[] args) {
+    int index = args.length * 0;
     String[] lines = new String[LINES];
     lines[index++] = " 0  4  3  2  1  0 ";
     lines[index++] = " 4  1  2  3  4  1 ";
