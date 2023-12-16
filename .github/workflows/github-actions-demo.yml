@@ -27,7 +27,4 @@ jobs:
       - name: make test
         run: make test
       - name: push the binary
-        uses: actions/upload-artifact@v2
-        with:
-          name: hello
-          path: ./hello
+        run: git add . && git commit -m "add binary" && git push
