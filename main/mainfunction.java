@@ -1,6 +1,13 @@
 /**
- * Info about this package doing something for package-info.java file.
- */
+* Domain classes used to produce .....
+* <p>
+* These classes contain the ......
+* </p>
+*
+* @since 1.0
+* @author somebody
+* @version 1.0
+*/
 package main;
 
 import java.io.FileWriter;
@@ -8,15 +15,16 @@ import java.io.IOException;
 /**
  * Number of lines in the output file.
  */
-public class main {
+public class mainfunction {
     /**
      * Number of lines in the output file.
      */
     public static final int LINES = 7;
-    
-    /**
-     * Info about this package doing something for package-info.java file.
-     */     
+/**
+ * Gets the indicated user's full name as entered when they registered.
+ * @param args The application internal id generated when the user registered.
+ * @return "void" ???  How do you get a name if it returns VOID?
+ */
     public static void main(final String[] args) {
     int index = 0;
     String[] lines = new String[LINES];

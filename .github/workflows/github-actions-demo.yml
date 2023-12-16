@@ -37,9 +37,9 @@ jobs:
           distribution: "temurin"
           architecture: x64
       - name: Run the Application
-        run: javac main/main.java; java main/main
+        run: javac main/mainfunction.java; java main/mainfunction
       - name: Run the Tester
-        run: javac tester/main.java; java tester/main
+        run: javac tester/maintester.java; java tester/maintester
       - name: Push the binaries to the repo
         run: |
           git config --global user.email "kadirgokhann@gmail.com"

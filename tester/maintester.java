@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class main {
+public class maintester {
   public static void main(String[] args) {
     String[] lines = new String[6];
     lines[0] = " 0  4  3  2  1  0 ";
