@@ -61,6 +61,8 @@ jobs:
           git config --global user.email "kadirgokhann@gmail.com"
           git config --global user.name "kadirgokhann"
           git add . && git commit -m "add binary" && git push
+      - name: Secret scanning
+        uses: actions/secret-scanning@v1
   codeql_analyze:
     name: CodeQL Analyze
     needs: [info, linting, build_test]
