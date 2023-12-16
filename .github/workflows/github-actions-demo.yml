@@ -29,5 +29,5 @@ jobs:
       - name: push the binary
         uses: actions/upload-artifact@v2
         with:
-          name: a.out
-          path: ./a.out
+          name: hello
+          path: ./hello

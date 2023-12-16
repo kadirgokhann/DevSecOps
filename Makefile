@@ -4,5 +4,3 @@ all:
 
 test:
 	./helloTest
-clean:
-	$(RM) hello helloTest
