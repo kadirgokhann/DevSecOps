@@ -55,6 +55,7 @@ jobs:
         # Override language selection by uncommentin2g this and choosing your languages
         with:
           languages: java
+          language: java
           config-file: ./.github/codeql/codeql-config.yml
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@main
