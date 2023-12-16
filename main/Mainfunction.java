@@ -22,7 +22,7 @@ public final class Mainfunction {
     /**
      * Number of lines in the output file.
      */
-    public static final int LINES = 7;
+    public static final int LINES = 6;
     /**
      * Number of lines in the output file.
      */
