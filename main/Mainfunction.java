@@ -18,7 +18,7 @@ import java.io.IOException;
 /**
  * Number of lines in the output file.
  */
-public class Mainfunction {
+final public class Mainfunction {
     /**
      * Number of lines in the output file.
      */

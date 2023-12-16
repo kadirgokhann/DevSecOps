@@ -19,7 +19,7 @@ import java.util.Scanner;
 /**
   * Number of lines in the output file.
   */
-public class Maintester {
+final public class Maintester {
 /**
  * Number of lines in the output file.
  */

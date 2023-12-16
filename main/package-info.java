@@ -1,4 +1,3 @@
-package main;
 /**
 @SuppressWarnings("checkstyle:hideutilityclassconstructor")
 @SuppressWarnings("checkstyle:javadocpackage")
@@ -12,3 +11,4 @@ package main;
 * @author somebody
 * @version 1.0
 */
+package main;
