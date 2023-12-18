@@ -170,5 +170,5 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - uses: azure/aks-set-context@v3
         with:
-          resource-group: "<resource group name>"
-          cluster-name: "<cluster name>"
+          resource-group: "DefaultResourceGroup-EUS"
+          cluster-name: "mycluster"
