@@ -160,9 +160,10 @@ jobs:
     steps:
       - name: Install kubectl
         uses: azure/setup-kubectl@v3
+        id: install_kubectl
         with:
           version: "latest" # default is latest stable
-          id: install
+          
       - name: Login via Azure CLI
         uses: azure/aks-set-context@v1
         with:
