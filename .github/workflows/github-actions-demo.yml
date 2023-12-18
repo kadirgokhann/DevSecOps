@@ -158,22 +158,4 @@ jobs:
     runs-on: ubuntu-latest
     needs: containerize
     steps:
-      - name: Install kubectl
-        uses: azure/setup-kubectl@v3
-        id: install_kubectl
-        with:
-          version: "latest" # default is latest stable
-          
-      - name: Login via Azure CLI
-        uses: azure/aks-set-context@v1
-        with:
-              creds: '${{ secrets.AZURE_CREDENTIALS }}' # Azure credentials
-              resource-group: '<resource group name>'
-              cluster-name: '<cluster name>'
-          id: login
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Deploy to Kubernetes
-        run: |
-          # Your Kubernetes deployment commands here
-           kubectl apply -f your-deployment.yaml
+      - uses: azure/setup-kubectl@v2.0
