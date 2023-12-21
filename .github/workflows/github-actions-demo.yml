@@ -185,7 +185,7 @@ jobs:
       - name: Create k8s secret
         uses: azure/k8s-create-secret@v4
         with:
-          namespace: "myapp"
+          namespace: "default"
           secret-name: "mysecret"
           container-registry-url: "ghrc.io"
           container-registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -193,7 +193,7 @@ jobs:
         id: create-secret
       - uses: Azure/k8s-deploy@v4
         with:
-          namespace: "myapp"
+          namespace: "default"
           manifests: |
             ./deployment.yaml
           images: "ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:latest"
