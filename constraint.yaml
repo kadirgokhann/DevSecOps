@@ -1,4 +1,3 @@
-# pod-must-have-app-level.yaml
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sAllowedRepos
 metadata:
@@ -12,4 +11,4 @@ spec:
       - "default"
   parameters:
     repos:
-      - "ghcr.io"
+      - "openpolicyagent/"
