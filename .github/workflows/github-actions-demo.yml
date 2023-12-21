@@ -182,12 +182,12 @@ jobs:
       - name: Set imagePullSecret
         uses: azure/k8s-create-secret@v4
         with:
-            namespace: 'myapp'
-            secret-name: 'mysecret'
-            container-registry-url: 'ghrc.io'
-            container-registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
-            container-registry-password: ${{ secrets.DOCKER_PASSWORD }}
-           id: create-secret
+          namespace: "myapp"
+          secret-name: "mysecret"
+          container-registry-url: "ghrc.io"
+          container-registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
+          container-registry-password: ${{ secrets.DOCKER_PASSWORD }}
+          id: create-secret
       - uses: Azure/k8s-deploy@v4
         with:
           namespace: "myapp"
