@@ -163,6 +163,10 @@ jobs:
       actions: read
     needs: containerize
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Kubectl
         uses: azure/setup-kubectl@v2.0
       - name: Azure Login
