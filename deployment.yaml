@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: front-end
-      image: ghcr.io/kadirgokhann/ummyapp:latest
+      image: ghcr.io/kadirgokhann/dummyapp:latest
       ports:
         - containerPort: 80
