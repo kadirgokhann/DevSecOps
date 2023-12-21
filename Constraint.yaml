@@ -1,7 +1,7 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sAllowedRepos
 metadata:
-  name: repo-is-openpolicyagent
+  name: Constraint
 spec:
   match:
     kinds:
@@ -11,4 +11,4 @@ spec:
       - "default"
   parameters:
     repos:
-      - "openpolicyagent/"
+      - "ghcr.io/"
