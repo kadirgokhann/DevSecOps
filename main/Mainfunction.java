@@ -20,7 +20,7 @@ import java.io.IOException;
  */
 public final class Mainfunction {
     /**
-     * Number of lines in the outputsad file.ssfsfsdsdssdsadsasdasddssdsdsfasf
+     * Number of lines in the outputsad file.ss
      */
     public static final int LINES = 6;
     /**
