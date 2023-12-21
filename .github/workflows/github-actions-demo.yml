@@ -168,7 +168,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Kubectl
-        uses: azure/setup-kubectl@v2.0
+        uses: azure/setup-kubectl@v3.0
       - name: Azure Login
         uses: azure/login@v1
         with:
