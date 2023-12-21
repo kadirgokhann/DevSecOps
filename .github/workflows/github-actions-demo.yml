@@ -200,6 +200,6 @@ jobs:
           namespace: "default"
           manifests: |
             ./deployment.yaml
-          images: "ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:latest"
+          images: "ghcr.io/kadirgokhann/dummyapp:latest"
           imagepullsecrets: |
             mysecret
