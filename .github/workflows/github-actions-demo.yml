@@ -160,7 +160,8 @@ jobs:
       contents: read
       pages: write
       id-token: write
-    #needs: containerize
+      actions: read
+    needs: containerize
     steps:
       - uses: azure/setup-kubectl@v2.0
       - uses: azure/login@v1
@@ -168,7 +169,30 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      - name: Azure CLI script
+        uses: azure/CLI@v1
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az account show
       - uses: azure/aks-set-context@v3
         with:
           resource-group: "DefaultResourceGroup-EUS"
           cluster-name: "mycluster"
+      - name: Set imagePullSecret
+        uses: azure/k8s-create-secret@v4
+        with:
+            namespace: 'myapp'
+            secret-name: 'mysecret'
+            container-registry-url: 'ghrc.io'
+            container-registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
+            container-registry-password: ${{ secrets.DOCKER_PASSWORD }}
+           id: create-secret
+      - uses: Azure/k8s-deploy@v4
+        with:
+          namespace: "myapp"
+          manifests: |
+            ./deployment.yaml
+          images: "ghcr.io/${{ secrets.DOCKERHUB_USERNAME }}/dummyapp:latest"
+          imagepullsecrets: |
+            mysecret
