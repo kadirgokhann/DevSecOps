@@ -96,9 +96,9 @@ jobs:
       - name: ContrainstsTemplateGet
         run: |
           kubectl get ConstraintTemplate
-      - name: ContrainstsCreate
-        run: |
-          kubectl create -f constraint.yaml
+      #- name: ContrainstsCreate
+      #  run: |
+      #    kubectl create -f constraint.yaml
       - name: ContrainstsGet
         run: |
           kubectl get constraint
