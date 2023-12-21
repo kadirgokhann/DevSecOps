@@ -195,6 +195,18 @@ jobs:
           container-registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
           container-registry-password: ${{ secrets.DOCKER_PASSWORD }}
         id: create-secret
+      - name: ContrainstsTemplateCreate
+        run: |
+          kubectl create -f ConstraintTemplate.yaml
+      - name: ContrainstsTemplateGet
+        run: |
+          kubectl get ConstraintTemplate
+      - name: ContrainstsCreate
+        run: |
+          kubectl create -f constraint.yaml
+      - name: ContrainstsGet
+        run: |
+          kubectl get Constraint
       - uses: Azure/k8s-deploy@v4
         with:
           namespace: "default"
