@@ -195,6 +195,9 @@ jobs:
           container-registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
           container-registry-password: ${{ secrets.DOCKER_PASSWORD }}
         id: create-secret
+      - name:
+        run: |
+          kubectl apply -f https://raw.githubusercontent.com/open-policy-agent/gatekeeper/master/deploy/gatekeeper.yaml
       - name: ContrainstsTemplateCreate
         run: |
           kubectl create -f ConstraintTemplate.yaml
