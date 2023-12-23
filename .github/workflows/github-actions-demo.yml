@@ -90,15 +90,15 @@ jobs:
       - name: Install Gatekeeper
         run: |
           kubectl apply -f https://raw.githubusercontent.com/open-policy-agent/gatekeeper/master/deploy/gatekeeper.yaml
-      # - name: ContrainstsTemplateCreate
-      #   run: |
-      #   :kubectl create -f ConstraintTemplate.yaml
+      #- name: ContrainstsTemplateCreate
+      #  run: |
+      #    kubectl create -f ConstraintTemplate.yaml
       - name: ContrainstsTemplateGet
         run: |
           kubectl get ConstraintTemplate
-      #- name: ContrainstsCreate
-      #  run: |
-      #    kubectl create -f constraint.yaml
+      - name: ContrainstsCreate
+        run: |
+          kubectl create -f constraint.yaml
       - name: ContrainstsGet
         run: |
           kubectl get constraint
