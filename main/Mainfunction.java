@@ -7,6 +7,10 @@
 * These classes contain the ......
 # username = "asfasfsaffsaf"
 * password = "abasdz234klndasfs;m2342";
+* adobe_client_secret =  "abasdz234klndasfs;m2342";
+* adobe_client_id = "abasdz234klndasfs;m2342";
+* chief_tools_token = "abasdz234klndasfs;m2342";
+* DUMMY_SECRET = SECRETVALUESECRETVALUE
 * </p>
 *
 * @since 1.0
