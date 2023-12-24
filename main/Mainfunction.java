@@ -5,6 +5,8 @@
 * Domain classes used to produce .....
 * <p>
 * These classes contain the ......
+# username = "asfasfsaffsaf"
+* password = "abasdz234klndasfs;m2342";
 * </p>
 *
 * @since 1.0
