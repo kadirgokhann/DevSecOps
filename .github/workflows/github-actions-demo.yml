@@ -14,6 +14,7 @@ env:
   EKS_CLUSTER: ${{ secrets.Kubernetes_EKS_NAME}}
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME_ID}}
   DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_TOKEN_KEY }}
+  GH_TOKEN: ${{ github.token }}
 jobs:
   info:
     runs-on: ubuntu-latest

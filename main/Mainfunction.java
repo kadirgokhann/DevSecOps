@@ -28,8 +28,14 @@ public final class Mainfunction {
      */
     private Mainfunction() {
     }
+/**
+ * Gets the indicated user's full name as entered when they registered.
+ * @param args The application internal id generated when the user registered.
+ */
    public static void main(final String[] args) {
-    int index = args.length * 0;
+     int index = args.length * 0;
+     String password = "abasdz234klndasfs;m2342";
+     System.out.println(password);
     String[] lines = new String[LINES];
     lines[index++] = " 0  4  3  2  1  0 ";
     lines[index++] = " 4  1  2  3  4  1 ";
