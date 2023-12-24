@@ -8,6 +8,6 @@ metadata:
 spec:
   containers:
     - name: front-end
-      image: docker.io/kadirgokhann/dummyapp:latest
+      image: ghcr.io/kadirgokhann/dummyapp:latest
       ports:
         - containerPort: 80
