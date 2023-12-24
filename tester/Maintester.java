@@ -42,7 +42,7 @@ static final int LINES = 6;
     lines[index++] = " 3  2  3  4  1  2 ";
     lines[index++] = " 2  3  4  1  2  2 ";
     lines[index++] = " 1  4  1  2  3  2 ";
-    lines[index++] = " 0  1  2  2  2  0 ";
+    lines[index++] = " 0  1  2  2  2  1 ";
     boolean success = true;
     try {
       File myObj = new File("results.txt");
