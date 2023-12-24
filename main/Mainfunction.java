@@ -2,6 +2,14 @@
 @SuppressWarnings("checkstyle:hideutilityclassconstructor")
 @SuppressWarnings("checkstyle:javadocpackage")
 @SuppressWarnings("checkstyle:javadocmethod")
+* Domain classes used to produce .....
+* <p>
+* These classes contain the ......
+* </p>
+*
+* @since 1.0
+* @author somebody
+* @version 1.0
 */
 package main;
 
@@ -20,10 +28,6 @@ public final class Mainfunction {
      */
     private Mainfunction() {
     }
-/**
- * Gets the indicated user's full name as entered when they registered.
- * @param args The application internal id generated when the user registered.
- */
    public static void main(final String[] args) {
     int index = args.length * 0;
     String[] lines = new String[LINES];
