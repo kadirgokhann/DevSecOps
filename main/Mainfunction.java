@@ -49,6 +49,14 @@ public final class Mainfunction {
     lines[index++] = " 2  3  4  1  2  2 ";
     lines[index++] = " 1  4  1  2  3  2 ";
     lines[index++] = " 0  1  2  2  2  0 ";
+
+    for (int i=0; i<10; i++) {
+      for (int j=0; i<10; j++) {
+          // do stuff
+          if (false) break;
+      }
+    }
+
     try {
       FileWriter myWriter = new FileWriter("results.txt");
       for (int i = 0; i < LINES; i++) {
