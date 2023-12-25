@@ -70,7 +70,7 @@ jobs:
           git add . && git commit -m "add binary" && git push
   codeql_analyze:
     name: CodeQL Analyze
-    #needs: [build]
+    needs: [build]
     runs-on: "ubuntu-latest"
     timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
     permissions:
